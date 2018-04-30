@@ -14,6 +14,7 @@ class CampaignShow extends Component {
 
 		console.log(summary)
 		return {
+			address: props.query.address,
 			minimumContribution: summary[0],
 			balance: summary[1],
 			requestCount: summary[2],
@@ -83,7 +84,7 @@ class CampaignShow extends Component {
 
 				  <Grid.Row>
 				    <Grid.Column>
-				      <Link route={`/campaigns/${this.props.address}/requests`}>
+				      <Link route={`/campaign/${this.props.address}/requests`}>
 					<a>
 					  <Button primary>View Requests</Button>
 					</a>
